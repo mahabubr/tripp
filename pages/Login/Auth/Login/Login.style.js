@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     },
     input_container: {
         gap: 15,
-        marginTop: 25
+        marginTop: 10
     },
     input_content: {
         borderWidth: 1,
@@ -39,9 +39,6 @@ const styles = StyleSheet.create({
         backgroundColor: colors.gray,
         borderColor: colors.dark_gray,
         fontSize: 16,
-    },
-    bottomContent: {
-        marginTop: 20
     },
     text_reg: {
         marginTop: 14,
@@ -92,6 +89,9 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontWeight: 800,
         color: 'red'
+    },
+    forgetText: {
+        textAlign: 'right'
     }
 })
 

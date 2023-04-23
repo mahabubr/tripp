@@ -1,4 +1,11 @@
-import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
+import {
+	View,
+	Text,
+	Image,
+	TextInput,
+	TouchableOpacity,
+	ScrollView,
+} from "react-native";
 import React, { useState } from "react";
 
 import styles from "./Login.style";
@@ -39,7 +46,7 @@ const Login = () => {
 	};
 
 	return (
-		<View style={styles.container}>
+		<ScrollView style={styles.container}>
 			<Image
 				style={styles.logo}
 				source={cut_logo}
@@ -65,6 +72,9 @@ const Login = () => {
 					autoCorrect={false}
 					onChangeText={(text) => setPassword(text)}
 				/>
+				<TouchableOpacity onPress={() => Navigate.navigate("ForgetPassword")}>
+					<Text style={styles.forgetText}>Forget Password</Text>
+				</TouchableOpacity>
 				<TouchableOpacity
 					style={styles.btnTouch}
 					onPress={onSignInPress}>
@@ -99,7 +109,7 @@ const Login = () => {
 					Register
 				</Text>
 			</Text>
-		</View>
+		</ScrollView>
 	);
 };
 

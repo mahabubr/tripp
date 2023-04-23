@@ -5,8 +5,9 @@ import {
 	TextInput,
 	TouchableOpacity,
 	Modal,
+	ScrollView,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import styles from "./SignUp.style";
 import Icon from "react-native-vector-icons/AntDesign";
@@ -15,12 +16,23 @@ import Icon2 from "react-native-vector-icons/Octicons";
 import { cut_logo } from "../../../../constants/logo";
 import colors from "../../../../constants/colors";
 import { useNavigation } from "@react-navigation/native";
-import { useSignUp } from "@clerk/clerk-expo";
+import { useSignUp, useOAuth } from "@clerk/clerk-expo";
+
+import * as WebBrowser from "expo-web-browser";
+import useWarmUpBrowser from "../../../../clerk/warmUpBrowser";
+
+WebBrowser.maybeCompleteAuthSession();
 
 const SignUp = () => {
+	useWarmUpBrowser();
+
 	const Navigate = useNavigation();
 
 	const { isLoaded, setActive, signUp } = useSignUp();
+	const { startOAuthFlow } = useOAuth({ strategy: "oauth_google" });
+	const { startOAuthFlow: facebookOAuthFlow } = useOAuth({
+		strategy: "oauth_facebook",
+	});
 
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -72,10 +84,39 @@ const SignUp = () => {
 		}
 	};
 
+	const onPressGoogleSignIn = useCallback(async () => {
+		try {
+			const { createdSessionId, signIn, signUp, setActive } =
+				await startOAuthFlow();
+
+			if (createdSessionId) {
+				setActive({ session: createdSessionId });
+				console.log("account Created");
+			} else {
+			}
+		} catch (e) {
+			console.log(e.errors);
+		}
+	});
+	const onPressFacebookSignIn = useCallback(async () => {
+		try {
+			const { createdSessionId, signIn, signUp, setActive } =
+				await facebookOAuthFlow();
+
+			if (createdSessionId) {
+				setActive({ session: createdSessionId });
+				console.log("account Created");
+			} else {
+			}
+		} catch (e) {
+			console.log(e.errors);
+		}
+	});
+
 	return (
 		<View>
 			{!pendingVerify && (
-				<View style={styles.container}>
+				<ScrollView style={styles.container}>
 					<Image
 						style={styles.logo}
 						source={cut_logo}
@@ -109,7 +150,9 @@ const SignUp = () => {
 					</View>
 					<Text style={styles.break_text}>Or Continue With</Text>
 					<View style={styles.social_content}>
-						<TouchableOpacity style={styles.oAuth_btn}>
+						<TouchableOpacity
+							onPress={onPressGoogleSignIn}
+							style={styles.oAuth_btn}>
 							<Icon
 								name='google'
 								size={20}
@@ -117,7 +160,9 @@ const SignUp = () => {
 							/>
 							<Text style={styles.oAuth_text}>Continue With Google</Text>
 						</TouchableOpacity>
-						<TouchableOpacity style={styles.oAuth_btn}>
+						<TouchableOpacity
+							onPress={onPressFacebookSignIn}
+							style={styles.oAuth_btn}>
 							<Icon
 								name='facebook-square'
 								size={20}
@@ -135,7 +180,7 @@ const SignUp = () => {
 							Login
 						</Text>
 					</Text>
-				</View>
+				</ScrollView>
 			)}
 			{pendingVerify && (
 				<View style={styles.container}>

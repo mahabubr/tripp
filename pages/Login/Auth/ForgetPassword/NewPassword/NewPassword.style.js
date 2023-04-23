@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import colors from "../../../../constants/colors";
+import colors from "../../../../../constants/colors";
 
 const styles = StyleSheet.create({
     container: {
@@ -8,17 +8,12 @@ const styles = StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto'
     },
-    logo: {
-        width: 200,
-        height: 200,
-        resizeMode: 'center',
-        alignSelf: 'center'
-    },
     title: {
         textAlign: 'center',
         fontSize: 30,
         fontWeight: 700,
-        color: colors.primary
+        color: colors.primary,
+        marginTop: 50
     },
     sub_title: {
         textAlign: 'center',
@@ -52,5 +47,4 @@ const styles = StyleSheet.create({
         fontSize: 16
     },
 })
-
 export default styles

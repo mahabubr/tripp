@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {
 	ForgetPassword,
 	Login,
+	NewPassword,
 	SelectLanguage,
 	SignUp,
 } from "../../pages/Login/Auth";
@@ -35,6 +36,10 @@ const LoginRouter = () => {
 			<Stack.Screen
 				name='ForgetPassword'
 				component={ForgetPassword}
+			/>
+			<Stack.Screen
+				name='NewPassword'
+				component={NewPassword}
 			/>
 			<Stack.Screen
 				name='SelectLanguage'
