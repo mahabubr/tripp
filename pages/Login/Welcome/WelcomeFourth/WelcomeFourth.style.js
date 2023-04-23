@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius: 50
     },
     content_text: {
-        marginVertical: 50,
+        marginTop: 50,
     },
     contentPrimaryText: {
         textAlign: 'center',
@@ -30,52 +30,31 @@ const styles = StyleSheet.create({
         color: colors.dark_gray
     },
     bottomContent: {
-        flex: 4,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        width: '90%',
+        width: '80%',
         marginLeft: 'auto',
         marginRight: 'auto',
-        gap: 100
+        marginTop: 20
     },
-    arrowContent: {
-        backgroundColor: colors.teal,
-        flex: 1,
-        height: 40,
-        width: 40,
-        borderRadius: 50,
-        justifyContent: 'center',
-        alignItems: 'center'
+    text_reg: {
+        marginTop: 14,
+        textAlign: 'center'
     },
-    navigateContent: {
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "space-around",
-        flexDirection: "row",
-        gap: 20
+    text_reg1: {
+        fontSize: 16,
+        fontWeight: 700,
+        color: colors.primary
     },
-    navigContent: {
-        flex: 1,
-        width: 10,
-        height: 10,
-        backgroundColor: colors.light_secondary,
-        borderRadius: 50,
+    btnTouch: {
+        borderRadius: 10,
+        backgroundColor: colors.sec_primary,
+        padding: 15,
     },
-    navigContent1: {
-        flex: 1,
-        width: 10,
-        height: 10,
-        backgroundColor: colors.light_secondary,
-        borderRadius: 50
-    },
-    navigContent2: {
-        flex: 1,
-        width: 10,
-        height: 10,
-        backgroundColor: colors.light_secondary,
-        borderRadius: 50
-    },
+    btnText: {
+        textAlign: 'center',
+        fontWeight: 700,
+        color: colors.gray,
+        fontSize: 16
+    }
 })
 
 export default styles

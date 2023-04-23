@@ -1,4 +1,11 @@
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import {
+	View,
+	Text,
+	TouchableOpacity,
+	Image,
+	Button,
+	TouchableHighlight,
+} from "react-native";
 import React from "react";
 
 import styles from "./WelcomeFourth.style";
@@ -6,12 +13,13 @@ import { holiday_man } from "../../../../constants/logo";
 
 import Icon from "react-native-vector-icons/MaterialIcons";
 import { useNavigation } from "@react-navigation/native";
+import colors from "../../../../constants/colors";
 
 const WelcomeFourth = () => {
 	const Navigate = useNavigation();
 
 	return (
-		<TouchableOpacity onPress={() => Navigate.navigate("WelcomeFourth")}>
+		<View>
 			<Image
 				style={styles.image}
 				source={holiday_man}
@@ -26,20 +34,21 @@ const WelcomeFourth = () => {
 				</Text>
 			</View>
 			<View style={styles.bottomContent}>
-				<View style={styles.arrowContent}>
-					<Icon
-						name='keyboard-arrow-right'
-						size={30}
-						color='#ffffff'
-					/>
-				</View>
-				<View style={styles.navigateContent}>
-					<View style={styles.navigContent}></View>
-					<View style={styles.navigContent1}></View>
-					<View style={styles.navigContent2}></View>
-				</View>
+				<TouchableOpacity
+					style={styles.btnTouch}
+					onPress={() => Navigate.navigate("Login")}>
+					<Text style={styles.btnText}>GET STARTED</Text>
+				</TouchableOpacity>
+				<Text style={styles.text_reg}>
+					Don't have an account ?{" "}
+					<Text
+						onPress={() => Navigate.navigate("SignUp")}
+						style={styles.text_reg1}>
+						Register
+					</Text>
+				</Text>
 			</View>
-		</TouchableOpacity>
+		</View>
 	);
 };
 

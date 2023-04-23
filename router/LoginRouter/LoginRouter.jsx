@@ -2,12 +2,12 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import {
-	SlashWelcome,
-	WelcomeFirst,
-	WelcomeSecond,
-	WelcomeThird,
-	WelcomeFourth,
-} from "../../pages/Login/Welcome";
+	ForgetPassword,
+	Login,
+	SelectLanguage,
+	SignUp,
+} from "../../pages/Login/Auth";
+import WelcomeRouter from "./WelcomeRouter/WelcomeRouter";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,32 +16,34 @@ const LoginRouter = () => {
 		<Stack.Navigator
 			screenOptions={{
 				headerShown: false,
-				// contentStyle: {
-				// 	paddingVertical: 50,
-				// 	paddingHorizontal: 40,
-				// },
+				contentStyle: {
+					// paddingVertical: 50,
+					// paddingHorizontal: 40,
+					backgroundColor: "#ffffff",
+				},
 			}}
-			initialRouteName='SlashWelcome'>
+			// initialRouteName='WelcomeRouter'
+		>
 			<Stack.Screen
-				name='SlashWelcome'
-				component={SlashWelcome}
+				name='Login'
+				component={Login}
 			/>
 			<Stack.Screen
-				name='WelcomeFirst'
-				component={WelcomeFirst}
+				name='SignUp'
+				component={SignUp}
 			/>
 			<Stack.Screen
-				name='WelcomeSecond'
-				component={WelcomeSecond}
+				name='ForgetPassword'
+				component={ForgetPassword}
 			/>
 			<Stack.Screen
-				name='WelcomeThird'
-				component={WelcomeThird}
+				name='SelectLanguage'
+				component={SelectLanguage}
 			/>
-			<Stack.Screen
-				name='WelcomeFourth'
-				component={WelcomeFourth}
-			/>
+			{/* <Stack.Screen
+				name='WelcomeRouter'
+				component={WelcomeRouter}
+			/> */}
 		</Stack.Navigator>
 	);
 };
