@@ -7,6 +7,7 @@ import {
 	NewPassword,
 	SelectLanguage,
 	SignUp,
+	UserInfo,
 } from "../../pages/Login/Auth";
 import WelcomeRouter from "./WelcomeRouter/WelcomeRouter";
 
@@ -23,8 +24,11 @@ const LoginRouter = () => {
 					backgroundColor: "#ffffff",
 				},
 			}}
-			// initialRouteName='WelcomeRouter'
-		>
+			initialRouteName='SelectLanguage'>
+			<Stack.Screen
+				name='WelcomeRouter'
+				component={WelcomeRouter}
+			/>
 			<Stack.Screen
 				name='Login'
 				component={Login}
@@ -46,8 +50,8 @@ const LoginRouter = () => {
 				component={SelectLanguage}
 			/>
 			{/* <Stack.Screen
-				name='WelcomeRouter'
-				component={WelcomeRouter}
+				name='UserInfo'
+				component={UserInfo}
 			/> */}
 		</Stack.Navigator>
 	);

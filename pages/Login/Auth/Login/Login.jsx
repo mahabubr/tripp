@@ -6,7 +6,7 @@ import {
 	TouchableOpacity,
 	ScrollView,
 } from "react-native";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import styles from "./Login.style";
 import { cut_logo } from "../../../../constants/logo";
@@ -14,12 +14,23 @@ import { cut_logo } from "../../../../constants/logo";
 import Icon from "react-native-vector-icons/AntDesign";
 import colors from "../../../../constants/colors";
 import { useNavigation } from "@react-navigation/native";
-import { useSignIn } from "@clerk/clerk-expo";
+import { useSignIn, useOAuth } from "@clerk/clerk-expo";
+
+import * as WebBrowser from "expo-web-browser";
+import useWarmUpBrowser from "../../../../clerk/warmUpBrowser";
+
+WebBrowser.maybeCompleteAuthSession();
 
 const Login = () => {
+	useWarmUpBrowser();
+
 	const Navigate = useNavigation();
 
 	const { isLoaded, setActive, signIn } = useSignIn();
+	const { startOAuthFlow } = useOAuth({ strategy: "oauth_google" });
+	const { startOAuthFlow: facebookOAuthFlow } = useOAuth({
+		strategy: "oauth_facebook",
+	});
 
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
@@ -44,6 +55,35 @@ const Login = () => {
 			setError(JSON.stringify(e.errors[0].message));
 		}
 	};
+
+	const onPressGoogleSignIn = useCallback(async () => {
+		try {
+			const { createdSessionId, signIn, signUp, setActive } =
+				await startOAuthFlow();
+
+			if (createdSessionId) {
+				setActive({ session: createdSessionId });
+				console.log("account Created");
+			} else {
+			}
+		} catch (e) {
+			console.log(e.errors);
+		}
+	});
+	const onPressFacebookSignIn = useCallback(async () => {
+		try {
+			const { createdSessionId, signIn, signUp, setActive } =
+				await facebookOAuthFlow();
+
+			if (createdSessionId) {
+				setActive({ session: createdSessionId });
+				console.log("account Created");
+			} else {
+			}
+		} catch (e) {
+			console.log(e.errors);
+		}
+	});
 
 	return (
 		<ScrollView style={styles.container}>
@@ -83,7 +123,9 @@ const Login = () => {
 			</View>
 			<Text style={styles.break_text}>Or Continue With</Text>
 			<View style={styles.social_content}>
-				<TouchableOpacity style={styles.oAuth_btn}>
+				<TouchableOpacity
+					onPress={onPressGoogleSignIn}
+					style={styles.oAuth_btn}>
 					<Icon
 						name='google'
 						size={20}
@@ -91,7 +133,9 @@ const Login = () => {
 					/>
 					<Text style={styles.oAuth_text}>Continue With Google</Text>
 				</TouchableOpacity>
-				<TouchableOpacity style={styles.oAuth_btn}>
+				<TouchableOpacity
+					onPress={onPressFacebookSignIn}
+					style={styles.oAuth_btn}>
 					<Icon
 						name='facebook-square'
 						size={20}

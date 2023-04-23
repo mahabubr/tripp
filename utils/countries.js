@@ -1,0 +1,28 @@
+const countries = [
+    "Afrikaans",
+    "Albanian",
+    "Arabic",
+    "Armenian",
+    "Basque",
+    "Bengali",
+    "Bulgarian",
+    "Catalan",
+    "Cambodian",
+    "Croatian",
+    "Danish",
+    "Dutch",
+    "English",
+    "Finnish",
+    "French",
+    "Hebrew",
+    "Indonesian",
+    "Japanese",
+    "Javanese",
+    "Korean",
+    "Nepali",
+    "Russian",
+    "Thai",
+    "Xhosa",
+];
+
+export default countries

@@ -229,7 +229,9 @@ const SignUp = () => {
 						<Text style={styles.modal_sub_title}>
 							Your Account Create and Verify Successful
 						</Text>
-						<TouchableOpacity style={styles.btnTouch1}>
+						<TouchableOpacity
+							onPress={() => Navigate.navigate("SelectLanguage")}
+							style={styles.btnTouch1}>
 							<Text style={styles.btnText1}>Please Fill Your More Info</Text>
 						</TouchableOpacity>
 					</View>
