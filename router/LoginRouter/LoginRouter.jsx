@@ -24,7 +24,7 @@ const LoginRouter = () => {
 					backgroundColor: "#ffffff",
 				},
 			}}
-			initialRouteName='SelectLanguage'>
+			initialRouteName='WelcomeRouter'>
 			<Stack.Screen
 				name='WelcomeRouter'
 				component={WelcomeRouter}
