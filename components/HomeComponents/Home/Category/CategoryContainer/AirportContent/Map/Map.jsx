@@ -1,6 +1,6 @@
 import React from "react";
 
-import MapView, { Callout, Marker } from "react-native-maps";
+import MapView, { Marker } from "react-native-maps";
 
 import styles from "./Map.style";
 
@@ -8,7 +8,7 @@ import { Image, View } from "react-native";
 import { marker } from "../../../../../../../constants/logo";
 import { useGetAirportQuery } from "../../../../../../../redux/feature/category/airport/airportApi";
 
-const Map = () => {
+const Map = ({ setModalVisible }) => {
 	const { data } = useGetAirportQuery();
 
 	return (
@@ -22,6 +22,7 @@ const Map = () => {
 			}}>
 			{data?.map((item) => (
 				<Marker
+					onPress={() => setModalVisible(true)}
 					key={item._id}
 					coordinate={{ latitude: item.latitude, longitude: item.longitude }}
 					title={item.name}

@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 const ScreenHomeRouter = () => {
 	return (
 		<Stack.Navigator
-			initialRouteName='Home'
+			initialRouteName='Airport'
 			screenOptions={{
 				contentStyle: {
 					backgroundColor: "white",
