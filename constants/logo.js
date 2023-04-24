@@ -6,6 +6,8 @@ import holiday_man from '../assets/welcome/holyday_man.png'
 import road from '../assets/welcome/road.png'
 import desart from '../assets/welcome/desart.png'
 
+import pic_1 from '../assets/profile/pic_1.png'
+
 export {
     logo,
     cut_logo
@@ -16,4 +18,8 @@ export {
     holiday_man,
     desart,
     road
+}
+
+export {
+    pic_1
 }

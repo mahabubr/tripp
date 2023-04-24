@@ -1,10 +1,14 @@
 import { View, Text } from "react-native";
 import React from "react";
 
+import { TopBar } from "../../../../components/HomeComponents/Home/index.js";
+
+import styles from "./Home.style";
+
 const Home = () => {
 	return (
 		<View>
-			<Text>Home</Text>
+			<TopBar />
 		</View>
 	);
 };
