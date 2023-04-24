@@ -6,8 +6,8 @@ const colors = {
     light_secondary: '#FF6000',
     brown: '#C7E9B0',
     teal: '#159895',
-    gray: '#F5F5F5',
-    dark_gray: '#4D4D4D'
+    gray: '#F0F0F0',
+    dark_gray: '#9BA4B5'
 }
 
 export default colors
