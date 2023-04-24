@@ -19,6 +19,7 @@ const HomeRouter = () => {
 			screenOptions={{
 				headerShown: false,
 				tabBarLabel: "",
+				tabBarStyle: { elevation: 0, borderTopWidth: 0 },
 			}}>
 			<Tab.Screen
 				options={{
