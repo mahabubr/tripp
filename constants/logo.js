@@ -7,6 +7,7 @@ import road from '../assets/welcome/road.png'
 import desart from '../assets/welcome/desart.png'
 
 import pic_1 from '../assets/profile/pic_1.png'
+import marker from '../assets/marker/marker.png'
 
 export {
     logo,
@@ -21,5 +22,6 @@ export {
 }
 
 export {
-    pic_1
+    pic_1,
+    marker
 }

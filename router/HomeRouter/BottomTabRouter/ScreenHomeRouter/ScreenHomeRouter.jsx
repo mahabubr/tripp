@@ -12,8 +12,6 @@ const ScreenHomeRouter = () => {
 			screenOptions={{
 				contentStyle: {
 					backgroundColor: "white",
-					paddingVertical: 40,
-					paddingHorizontal: 30,
 				},
 				headerShown: false,
 			}}>

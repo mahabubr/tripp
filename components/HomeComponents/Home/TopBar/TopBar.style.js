@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'center'
+        alignItems: 'center',
     },
     image: {
         width: 50,
@@ -44,8 +44,6 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 50,
         borderColor: colors.sec_primary,
-        shadowColor: "#000",
-        elevation: 100,
     }
 })
 

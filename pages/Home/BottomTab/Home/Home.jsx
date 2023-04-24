@@ -13,7 +13,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 const Home = () => {
 	return (
-		<ScrollView>
+		<ScrollView style={styles.container}>
 			<TopBar />
 			<SearchBar />
 			<Category />
