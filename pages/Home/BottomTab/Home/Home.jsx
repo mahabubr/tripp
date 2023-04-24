@@ -1,21 +1,24 @@
-import { View, Text } from "react-native";
+import { ScrollView } from "react-native";
 import React from "react";
 
 import {
+	AirportContent,
+	Category,
 	SearchBar,
 	TopBar,
 } from "../../../../components/HomeComponents/Home/index.js";
 
 import styles from "./Home.style";
-import Category from "../../../../components/HomeComponents/Home/Category/Category.jsx";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Home = () => {
 	return (
-		<View>
+		<ScrollView>
 			<TopBar />
 			<SearchBar />
 			<Category />
-		</View>
+			<AirportContent />
+		</ScrollView>
 	);
 };
 
