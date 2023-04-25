@@ -1,14 +1,17 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Home } from "../../../../pages/Home/BottomTab";
-import { Airport } from "../../../../pages/Home/BottomTab/Home/Category";
+import {
+	Airport,
+	AirportSingleItem,
+} from "../../../../pages/Home/BottomTab/Home/Category";
 
 const Stack = createNativeStackNavigator();
 
 const ScreenHomeRouter = () => {
 	return (
 		<Stack.Navigator
-			initialRouteName='Airport'
+			initialRouteName='Home'
 			screenOptions={{
 				contentStyle: {
 					backgroundColor: "white",
@@ -22,6 +25,10 @@ const ScreenHomeRouter = () => {
 			<Stack.Screen
 				name='Airport'
 				component={Airport}
+			/>
+			<Stack.Screen
+				name='AirportSingleItem'
+				component={AirportSingleItem}
 			/>
 		</Stack.Navigator>
 	);

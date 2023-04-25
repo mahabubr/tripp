@@ -48,6 +48,9 @@ const AirportContent = () => {
 					keyExtractor={(item) => item._id}
 					renderItem={({ item }) => (
 						<TouchableOpacity
+							onPress={() =>
+								Navigate.navigate("AirportSingleItem", { id: item._id })
+							}
 							style={styles.item_container}
 							key={item._id}>
 							<Image

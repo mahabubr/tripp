@@ -20,8 +20,6 @@ const styles = StyleSheet.create({
         padding: 8,
         borderRadius: 50,
         borderColor: colors.sec_primary,
-        shadowColor: "#000",
-        elevation: 100,
     },
     title: {
         fontSize: 20,

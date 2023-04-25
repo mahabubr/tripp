@@ -12,7 +12,16 @@ const airportApi = apiSlice.injectEndpoints({
                 url: '/sort-airport/'
             })
         }),
+        getSingleAirport: builder.query({
+            query: (id) => ({
+                url: `/airport/${id}`
+            })
+        })
     })
 })
 
-export const { useGetAirportQuery, useGetSortAirportQuery } = airportApi
+export const {
+    useGetAirportQuery,
+    useGetSortAirportQuery,
+    useGetSingleAirportQuery
+} = airportApi
