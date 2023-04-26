@@ -11,9 +11,12 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 import { Rating } from "react-native-ratings";
 
 import { WebView } from "react-native-webview";
+import { useNavigation } from "@react-navigation/native";
 
 const HotelMap = () => {
 	const { data } = useGeHotelQuery();
+
+	const Navigate = useNavigation();
 
 	return (
 		<MapView
@@ -30,6 +33,9 @@ const HotelMap = () => {
 						key={item._id}
 						coordinate={{ latitude: item.latitude, longitude: item.longitude }}>
 						<Callout
+							onPress={() =>
+								Navigate.navigate("HotelSingleItem", { id: item._id })
+							}
 							style={{
 								flex: -1,
 								position: "absolute",

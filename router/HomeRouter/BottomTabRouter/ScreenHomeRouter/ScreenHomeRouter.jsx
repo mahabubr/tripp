@@ -5,6 +5,7 @@ import {
 	Airport,
 	AirportSingleItem,
 	Hotel,
+	HotelSingleItem,
 	Taxi,
 	TaxiSingleItem,
 } from "../../../../pages/Home/BottomTab/Home/Category";
@@ -14,7 +15,7 @@ const Stack = createNativeStackNavigator();
 const ScreenHomeRouter = () => {
 	return (
 		<Stack.Navigator
-			initialRouteName='Hotel'
+			initialRouteName='Home'
 			screenOptions={{
 				contentStyle: {
 					backgroundColor: "white",
@@ -44,6 +45,10 @@ const ScreenHomeRouter = () => {
 			<Stack.Screen
 				name='Hotel'
 				component={Hotel}
+			/>
+			<Stack.Screen
+				name='HotelSingleItem'
+				component={HotelSingleItem}
 			/>
 		</Stack.Navigator>
 	);

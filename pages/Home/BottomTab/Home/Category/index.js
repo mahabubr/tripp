@@ -6,6 +6,7 @@ import Taxi from "./Taxi/Taxi"
 import TaxiSingleItem from "./Taxi/TaxiSingleItem/TaxiSingleItem"
 
 import Hotel from "./Hotel/Hotel"
+import HotelSingleItem from "./Hotel/HotelSingleItem/HotelSingleItem"
 
 export {
     Airport,
@@ -20,4 +21,5 @@ export {
 
 export {
     Hotel,
+    HotelSingleItem
 }

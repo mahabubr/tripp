@@ -39,6 +39,9 @@ const HotelContent = () => {
 					data={data}
 					renderItem={({ item }) => (
 						<TouchableOpacity
+							onPress={() =>
+								Navigate.navigate("HotelSingleItem", { id: item._id })
+							}
 							style={styles.card_content}
 							key={item._id}>
 							<View style={styles.image_container}>
