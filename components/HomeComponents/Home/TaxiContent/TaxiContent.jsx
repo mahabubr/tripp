@@ -35,7 +35,9 @@ const TaxiContent = () => {
 					keyExtractor={(item) => item._id}
 					renderItem={({ item }) => (
 						<TouchableOpacity
-							onPress={() => Navigate.navigate("TaxiSingleItem")}
+							onPress={() =>
+								Navigate.navigate("TaxiSingleItem", { id: item._id })
+							}
 							style={styles.text_content}
 							key={item._id}>
 							<Image

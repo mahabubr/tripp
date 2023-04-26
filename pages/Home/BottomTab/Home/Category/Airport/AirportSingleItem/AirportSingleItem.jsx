@@ -73,7 +73,7 @@ const AirportSingleItem = () => {
 									renderItem={({ item, index }) => (
 										<TouchableOpacity
 											style={styles.flight_content}
-											key={item.index}>
+											key={index}>
 											<Text style={styles.flightContentTitle}>
 												{item.flight_name}
 											</Text>

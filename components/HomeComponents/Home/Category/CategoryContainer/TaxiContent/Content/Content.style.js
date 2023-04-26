@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
     container: {
         justifyContent: 'space-between',
         alignItems: 'center',
+        marginBottom: 50
     }
     ,
     text_content: {
