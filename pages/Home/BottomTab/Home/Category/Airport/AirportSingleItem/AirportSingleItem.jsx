@@ -68,12 +68,12 @@ const AirportSingleItem = () => {
 							<View style={styles.flight_container}>
 								<Text style={styles.flight_txt}>Available Flights</Text>
 								<FlatList
-									keyExtractor={(item) => item._id}
+									keyExtractor={(item) => item.name}
 									data={data.flights}
-									renderItem={({ item }) => (
+									renderItem={({ item, index }) => (
 										<TouchableOpacity
 											style={styles.flight_content}
-											key={item._id}>
+											key={item.index}>
 											<Text style={styles.flightContentTitle}>
 												{item.flight_name}
 											</Text>

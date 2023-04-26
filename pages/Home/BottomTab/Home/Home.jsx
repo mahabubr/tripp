@@ -5,19 +5,22 @@ import {
 	AirportContent,
 	Category,
 	SearchBar,
+	TaxiContent,
 	TopBar,
 } from "../../../../components/HomeComponents/Home/index.js";
 
 import styles from "./Home.style";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 const Home = () => {
 	return (
-		<ScrollView style={styles.container}>
+		<ScrollView
+			contentContainerStyle={{ paddingBottom: 60 }}
+			style={styles.container}>
 			<TopBar />
 			<SearchBar />
 			<Category />
 			<AirportContent />
+			<TaxiContent />
 		</ScrollView>
 	);
 };

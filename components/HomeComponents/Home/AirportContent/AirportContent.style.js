@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
     },
     item_container: {
         marginTop: 20,
-
     },
     image: {
         width: '100%',

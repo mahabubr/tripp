@@ -4,6 +4,7 @@ import { Home } from "../../../../pages/Home/BottomTab";
 import {
 	Airport,
 	AirportSingleItem,
+	Taxi,
 } from "../../../../pages/Home/BottomTab/Home/Category";
 
 const Stack = createNativeStackNavigator();
@@ -29,6 +30,10 @@ const ScreenHomeRouter = () => {
 			<Stack.Screen
 				name='AirportSingleItem'
 				component={AirportSingleItem}
+			/>
+			<Stack.Screen
+				name='Taxi'
+				component={Taxi}
 			/>
 		</Stack.Navigator>
 	);

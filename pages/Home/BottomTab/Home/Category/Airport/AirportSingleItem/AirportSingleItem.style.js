@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         backgroundColor: colors.sec_primary,
         padding: 15,
-        width: '80%',
+        width: '90%',
         marginBottom: 10,
         marginLeft: 'auto',
         marginRight: 'auto'
