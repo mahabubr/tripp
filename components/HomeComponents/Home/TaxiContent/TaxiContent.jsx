@@ -1,11 +1,21 @@
-import { View, Text, SafeAreaView, TouchableOpacity } from "react-native";
+import {
+	View,
+	Text,
+	SafeAreaView,
+	TouchableOpacity,
+	FlatList,
+	Image,
+} from "react-native";
 import React from "react";
 
 import styles from "./TaxiContent.style";
 import { useNavigation } from "@react-navigation/native";
+import { useGetSortTaxiQuery } from "../../../../redux/feature/category/taxi/taxiApi";
 
 const TaxiContent = () => {
 	const Navigate = useNavigation();
+
+	const { data } = useGetSortTaxiQuery();
 
 	return (
 		<SafeAreaView style={styles.container}>
@@ -18,7 +28,30 @@ const TaxiContent = () => {
 					<Text style={styles.see_all_txt}>See All</Text>
 				</TouchableOpacity>
 			</View>
-			<View style={styles.content_container}></View>
+			<View style={styles.content_container}>
+				<FlatList
+					horizontal
+					data={data}
+					keyExtractor={(item) => item._id}
+					renderItem={({ item }) => (
+						<TouchableOpacity
+							onPress={() => Navigate.navigate("TaxiSingleItem")}
+							style={styles.text_content}
+							key={item._id}>
+							<Image
+								style={styles.image}
+								source={{ uri: item.image }}
+							/>
+							<View>
+								<Text style={styles.locate}>{item.root}</Text>
+								<Text style={styles.ratting}>
+									★ {item.ratting} / {item.people}
+								</Text>
+							</View>
+						</TouchableOpacity>
+					)}
+				/>
+			</View>
 		</SafeAreaView>
 	);
 };

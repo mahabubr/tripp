@@ -27,8 +27,26 @@ const styles = StyleSheet.create({
         borderBottomColor: colors.primary
     },
     content_container: {
-        marginTop: 5,
+        marginTop: 15,
     },
+    text_content: {
+        marginRight: 25
+    },
+    image: {
+        width: 160,
+        height: 100,
+        borderRadius: 10
+    },
+    locate: {
+        fontSize: 13,
+        fontWeight: 600,
+        color: colors.primary,
+        marginTop: 5
+    },
+    ratting: {
+        fontSize: 16,
+        color: colors.teal
+    }
 })
 
 export default styles

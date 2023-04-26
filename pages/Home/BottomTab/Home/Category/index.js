@@ -3,6 +3,7 @@ import Content from "../../../../../components/HomeComponents/Home/Category/Cate
 import AirportSingleItem from "./Airport/AirportSingleItem/AirportSingleItem"
 
 import Taxi from "./Taxi/Taxi"
+import TaxiSingleItem from "./Taxi/TaxiSingleItem/TaxiSingleItem"
 
 export {
     Airport,
@@ -11,5 +12,6 @@ export {
 }
 
 export {
-    Taxi
+    Taxi,
+    TaxiSingleItem
 }
