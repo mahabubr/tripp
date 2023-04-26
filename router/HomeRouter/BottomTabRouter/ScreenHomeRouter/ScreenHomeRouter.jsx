@@ -14,7 +14,7 @@ const Stack = createNativeStackNavigator();
 const ScreenHomeRouter = () => {
 	return (
 		<Stack.Navigator
-			initialRouteName='Home'
+			initialRouteName='Hotel'
 			screenOptions={{
 				contentStyle: {
 					backgroundColor: "white",

@@ -15,11 +15,11 @@ const styles = StyleSheet.create({
     },
     image_container: {
         backgroundColor: colors.gray,
-        padding: 8,
-        borderRadius: 50
+        padding: 10,
+        borderRadius: 20
     },
     image: {
-        width: 40,
+        width: 50,
         height: 40,
     },
     itemTxt: {
