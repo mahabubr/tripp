@@ -5,6 +5,8 @@ import AirportSingleItem from "./Airport/AirportSingleItem/AirportSingleItem"
 import Taxi from "./Taxi/Taxi"
 import TaxiSingleItem from "./Taxi/TaxiSingleItem/TaxiSingleItem"
 
+import Hotel from "./Hotel/Hotel"
+
 export {
     Airport,
     Content,
@@ -14,4 +16,8 @@ export {
 export {
     Taxi,
     TaxiSingleItem
+}
+
+export {
+    Hotel,
 }

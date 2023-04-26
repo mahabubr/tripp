@@ -10,6 +10,7 @@ import {
 } from "../../../../components/HomeComponents/Home/index.js";
 
 import styles from "./Home.style";
+import HotelContent from "../../../../components/HomeComponents/Home/HotelContent/HotelContent.jsx";
 
 const Home = () => {
 	return (
@@ -21,6 +22,7 @@ const Home = () => {
 			<Category />
 			<AirportContent />
 			<TaxiContent />
+			<HotelContent />
 		</ScrollView>
 	);
 };
