@@ -21,7 +21,7 @@ const SelectLanguage = () => {
 					<Text style={styles.bottomText1}>Your Selected Language</Text>
 					<Text style={styles.bottomText2}>{selectI}</Text>
 					<TouchableOpacity
-						onPress={() => Navigate.navigate("Home")}
+						onPress={() => Navigate.navigate("Profile")}
 						style={styles.btnTouch}>
 						<Text style={styles.btnText}>Lets Started</Text>
 					</TouchableOpacity>

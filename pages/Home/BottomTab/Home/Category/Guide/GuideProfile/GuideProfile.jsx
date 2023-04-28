@@ -89,8 +89,8 @@ const GuideProfile = () => {
 										latitude: data.latitude,
 										longitude: data.longitude,
 									}}
-									title={"Hello"}
-									description={"Hello"}
+									title={data.location}
+									description={"Make Happy"}
 								/>
 							</MapView>
 						</View>

@@ -45,10 +45,6 @@ const LoginRouter = () => {
 				name='NewPassword'
 				component={NewPassword}
 			/>
-			<Stack.Screen
-				name='SelectLanguage'
-				component={SelectLanguage}
-			/>
 			{/* <Stack.Screen
 				name='UserInfo'
 				component={UserInfo}

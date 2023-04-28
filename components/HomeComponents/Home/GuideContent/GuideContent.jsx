@@ -33,7 +33,7 @@ const GuideContent = () => {
 							onPress={() =>
 								Navigate.navigate("GuideProfile", { id: item._id })
 							}
-							style={{ marginRight: 30 }}
+							style={{ marginRight: 20 }}
 							key={item._id}>
 							<Image
 								style={styles.image}
