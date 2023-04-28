@@ -9,6 +9,7 @@ import Hotel from "./Hotel/Hotel"
 import HotelSingleItem from "./Hotel/HotelSingleItem/HotelSingleItem"
 
 import Guide from "./Guide/Guide"
+import GuideProfile from "./Guide/GuideProfile/GuideProfile"
 
 export {
     Airport,
@@ -27,5 +28,6 @@ export {
 }
 
 export {
-    Guide
+    Guide,
+    GuideProfile
 }

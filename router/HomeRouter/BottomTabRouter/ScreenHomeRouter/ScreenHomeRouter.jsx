@@ -5,6 +5,7 @@ import {
 	Airport,
 	AirportSingleItem,
 	Guide,
+	GuideProfile,
 	Hotel,
 	HotelSingleItem,
 	Taxi,
@@ -54,6 +55,10 @@ const ScreenHomeRouter = () => {
 			<Stack.Screen
 				name='Guide'
 				component={Guide}
+			/>
+			<Stack.Screen
+				name='GuideProfile'
+				component={GuideProfile}
 			/>
 		</Stack.Navigator>
 	);
