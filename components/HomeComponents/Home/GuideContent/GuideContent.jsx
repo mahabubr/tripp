@@ -30,6 +30,9 @@ const GuideContent = () => {
 					data={data}
 					renderItem={({ item }) => (
 						<TouchableOpacity
+							onPress={() =>
+								Navigate.navigate("GuideProfile", { id: item._id })
+							}
 							style={{ marginRight: 30 }}
 							key={item._id}>
 							<Image

@@ -4,6 +4,8 @@ import Content from "./TaxiContent/Content/Content"
 
 import HotelMap from "./HotelContent/HotelMap/HotelMap"
 
+import GuideContent from "./GuideContent/GuideContent"
+
 export {
     Map
 }
@@ -16,3 +18,6 @@ export {
     HotelMap
 }
 
+export {
+    GuideContent
+}
