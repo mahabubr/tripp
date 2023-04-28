@@ -4,6 +4,7 @@ import { Home } from "../../../../pages/Home/BottomTab";
 import {
 	Airport,
 	AirportSingleItem,
+	Guide,
 	Hotel,
 	HotelSingleItem,
 	Taxi,
@@ -49,6 +50,10 @@ const ScreenHomeRouter = () => {
 			<Stack.Screen
 				name='HotelSingleItem'
 				component={HotelSingleItem}
+			/>
+			<Stack.Screen
+				name='Guide'
+				component={Guide}
 			/>
 		</Stack.Navigator>
 	);

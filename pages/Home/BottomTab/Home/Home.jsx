@@ -4,13 +4,14 @@ import React from "react";
 import {
 	AirportContent,
 	Category,
+	GuideContent,
+	HotelContent,
 	SearchBar,
 	TaxiContent,
 	TopBar,
 } from "../../../../components/HomeComponents/Home/index.js";
 
 import styles from "./Home.style";
-import HotelContent from "../../../../components/HomeComponents/Home/HotelContent/HotelContent.jsx";
 
 const Home = () => {
 	return (
@@ -23,6 +24,7 @@ const Home = () => {
 			<AirportContent />
 			<TaxiContent />
 			<HotelContent />
+			<GuideContent />
 		</ScrollView>
 	);
 };

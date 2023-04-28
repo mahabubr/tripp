@@ -8,6 +8,8 @@ import TaxiSingleItem from "./Taxi/TaxiSingleItem/TaxiSingleItem"
 import Hotel from "./Hotel/Hotel"
 import HotelSingleItem from "./Hotel/HotelSingleItem/HotelSingleItem"
 
+import Guide from "./Guide/Guide"
+
 export {
     Airport,
     Content,
@@ -22,4 +24,8 @@ export {
 export {
     Hotel,
     HotelSingleItem
+}
+
+export {
+    Guide
 }
