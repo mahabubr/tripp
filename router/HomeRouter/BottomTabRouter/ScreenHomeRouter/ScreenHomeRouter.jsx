@@ -12,13 +12,14 @@ import {
 	Taxi,
 	TaxiSingleItem,
 } from "../../../../pages/Home/BottomTab/Home/Category";
+import DrawerRouter from "../../DrawerRouter/DrawerRouter";
 
 const Stack = createNativeStackNavigator();
 
 const ScreenHomeRouter = () => {
 	return (
 		<Stack.Navigator
-			initialRouteName='Home'
+			initialRouteName='Drawer'
 			screenOptions={{
 				contentStyle: {
 					backgroundColor: "white",
@@ -61,10 +62,10 @@ const ScreenHomeRouter = () => {
 				name='GuideProfile'
 				component={GuideProfile}
 			/>
-			<Stack.Screen
+			{/* <Stack.Screen
 				name='Destination'
 				component={Destination}
-			/>
+			/> */}
 		</Stack.Navigator>
 	);
 };

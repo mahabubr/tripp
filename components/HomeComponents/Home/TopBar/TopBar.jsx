@@ -9,8 +9,11 @@ import Icon2 from "react-native-vector-icons/AntDesign";
 import colors from "../../../../constants/colors";
 
 import styles from "./TopBar.style";
+import { useNavigation, DrawerActions } from "@react-navigation/native";
 
 const TopBar = () => {
+	const Navigation = useNavigation();
+
 	return (
 		<View style={styles.container}>
 			<View style={styles.leftContainer}>
@@ -40,7 +43,9 @@ const TopBar = () => {
 						color={colors.sec_primary}
 					/>
 				</TouchableOpacity>
-				<TouchableOpacity style={styles.icon}>
+				<TouchableOpacity
+					// onPress={() => Navigation.dispatch(DrawerActions.openDrawer())}
+					style={styles.icon}>
 					<Icon2
 						name='bars'
 						size={20}

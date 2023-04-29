@@ -7,6 +7,8 @@ import tokenCache from './clerk/tokenCache';
 import { Provider } from 'react-redux';
 import store from './redux/app/store';
 
+import 'react-native-gesture-handler';
+
 export default function App() {
 
   return (
