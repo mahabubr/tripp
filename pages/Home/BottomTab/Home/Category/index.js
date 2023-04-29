@@ -11,6 +11,8 @@ import HotelSingleItem from "./Hotel/HotelSingleItem/HotelSingleItem"
 import Guide from "./Guide/Guide"
 import GuideProfile from "./Guide/GuideProfile/GuideProfile"
 
+import Destination from "./Destination/Destination"
+
 export {
     Airport,
     Content,
@@ -30,4 +32,8 @@ export {
 export {
     Guide,
     GuideProfile
+}
+
+export {
+    Destination
 }
