@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.sec_primary,
         padding: 15,
         marginBottom: 20,
-        width: '60%',
+        width: '80%',
         marginLeft: 'auto',
         marginRight: 'auto',
     },

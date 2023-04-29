@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Message } from "../../../../pages/Home/BottomTab";
+import PersonMessage from "../../../../pages/Home/BottomTab/Message/PersonMessage/PersonMessage";
 
 const Stack = createNativeStackNavigator();
 
@@ -13,13 +14,16 @@ const MessageRouter = () => {
 				contentStyle: {
 					backgroundColor: "white",
 					paddingVertical: 40,
-					paddingHorizontal: 30,
 				},
 				headerShown: false,
 			}}>
 			<Stack.Screen
 				name='Message'
 				component={Message}
+			/>
+			<Stack.Screen
+				name='PersonMessage'
+				component={PersonMessage}
 			/>
 		</Stack.Navigator>
 	);

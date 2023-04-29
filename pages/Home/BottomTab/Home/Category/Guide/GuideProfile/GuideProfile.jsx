@@ -11,7 +11,7 @@ import React from "react";
 import styles from "./GuideProfile.style";
 import { TopNav } from "../../../../../../../components/Common";
 import { cover } from "../../../../../../../constants/logo";
-import { useRoute } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import { useGetSingleGuideQuery } from "../../../../../../../redux/feature/category/guide/guideApi";
 
 import MapView, { Marker } from "react-native-maps";
@@ -20,6 +20,8 @@ const GuideProfile = () => {
 	const {
 		params: { id },
 	} = useRoute();
+
+	const Navigate = useNavigation();
 
 	const { data } = useGetSingleGuideQuery(id);
 
@@ -56,7 +58,11 @@ const GuideProfile = () => {
 							</View>
 						</View>
 						<View style={styles.btn_content}>
-							<TouchableOpacity style={styles.btnTouch}>
+							<TouchableOpacity
+								onPress={() =>
+									Navigate.navigate("PersonMessage", { id: data._id })
+								}
+								style={styles.btnTouch}>
 								<Text style={styles.btnText}>Message</Text>
 							</TouchableOpacity>
 							<TouchableOpacity
