@@ -1,5 +1,5 @@
 import { View, Text } from "react-native";
-import React, { useEffect } from "react";
+import React from "react";
 import { TopNav } from "../../../../components/Common";
 
 import styles from "./Review.style";
@@ -20,18 +20,12 @@ import { useCallback } from "react";
 
 const Review = () => {
 	const [postText, setPostText] = useState("");
-	const [refreshing, setRefreshing] = useState(true);
+	const [refreshing, setRefreshing] = useState(false);
 
 	const { user } = useUser();
 
 	const [postStory] = usePostStoryMutation();
 	const { data } = useGetStoryQuery();
-
-	useEffect(() => {
-		if (data.length >= 1) {
-			setRefreshing(false);
-		}
-	}, []);
 
 	const onPressSubmitStory = () => {
 		const data = {
