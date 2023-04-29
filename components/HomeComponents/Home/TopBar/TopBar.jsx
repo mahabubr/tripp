@@ -36,7 +36,9 @@ const TopBar = () => {
 				</View>
 			</View>
 			<View style={styles.rightContainer}>
-				<TouchableOpacity style={styles.icon}>
+				<TouchableOpacity
+					onPress={() => Navigation.navigate("Notification")}
+					style={styles.icon}>
 					<Icon2
 						name='notification'
 						size={20}
@@ -45,6 +47,7 @@ const TopBar = () => {
 				</TouchableOpacity>
 				<TouchableOpacity
 					// onPress={() => Navigation.dispatch(DrawerActions.openDrawer())}
+					onPress={() => alert("Working...")}
 					style={styles.icon}>
 					<Icon2
 						name='bars'

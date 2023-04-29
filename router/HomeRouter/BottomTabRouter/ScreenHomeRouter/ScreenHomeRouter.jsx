@@ -1,6 +1,6 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Home } from "../../../../pages/Home/BottomTab";
+import { Home, Notification } from "../../../../pages/Home/BottomTab";
 import {
 	Airport,
 	AirportSingleItem,
@@ -61,6 +61,10 @@ const ScreenHomeRouter = () => {
 			<Stack.Screen
 				name='GuideProfile'
 				component={GuideProfile}
+			/>
+			<Stack.Screen
+				name='Notification'
+				component={Notification}
 			/>
 			{/* <Stack.Screen
 				name='Destination'
