@@ -23,14 +23,18 @@ const TopNav = ({ children }) => {
 				<Text style={styles.title}>{children}</Text>
 			</View>
 			<View style={styles.rightContainer}>
-				<TouchableOpacity style={styles.icon}>
+				<TouchableOpacity
+					onPress={() => Navigate.navigate("Notification")}
+					style={styles.icon}>
 					<Icon2
 						name='notification'
 						size={15}
 						color={colors.sec_primary}
 					/>
 				</TouchableOpacity>
-				<TouchableOpacity style={styles.icon}>
+				<TouchableOpacity
+					onPress={() => alert("Working...")}
+					style={styles.icon}>
 					<Icon2
 						name='bars'
 						size={15}
